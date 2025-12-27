@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>洋画詳細</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+<h2>洋画 詳細</h2>
+<p><a href="/">トップへ戻る</a> | <a href="/movies2">一覧へ</a></p>
+
+<table>
+<tr><th>ID</th><td><%= data.id %></td></tr>
+<tr><th>タイトル</th><td><%= data.title %></td></tr>
+<tr><th>監督</th><td><%= data.director %></td></tr>
+<tr><th>公開年</th><td><%= data.year %></td></tr>
+<tr><th>国</th><td><%= data.country %></td></tr>
+<tr><th>ジャンル</th><td><%= data.genre %></td></tr>
+</table>
+
+<p>
+<a href="/movies2/edit/<%= id %>">編集</a> |
+<a href="/movies2/delete/<%= id %>" onclick="return confirm('削除しますか？');">削除</a>
+</p>
+</body>
+</html>

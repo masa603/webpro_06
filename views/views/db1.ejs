@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>京葉線の駅</title>
+</head>
+<body>
+    <h2>京葉線の駅の詳細</h2> [cite: 181]
+    <table>
+        <% for(let row of data) { %>
+            <tr>
+                <td>ID:<%= row.id %></td> [cite: 184]
+                <td>駅コード: <%= row.code %></td> [cite: 185]
+                <td>駅名:<%= row.name %></td> [cite: 186]
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
