@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ディズニーパーク 新規登録</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+<h2>ディズニーパーク 新規登録</h2>
+<p><a href="/">トップへ戻る</a> | <a href="/disney2">一覧へ</a></p>
+
+<form action="/disney2" method="POST">
+  <div>名称：<input name="name" required></div>
+  <div>国：<input name="country" required></div>
+  <div>開園年：<input type="number" name="opened" required></div>
+  <div>パーク数：<input type="number" name="parks" required></div>
+  <button type="submit">登録</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ディズニーパーク詳細</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+<h2>ディズニーパーク 詳細</h2>
+<p><a href="/">トップへ戻る</a> | <a href="/disney2">一覧へ</a></p>
+
+<table border="1">
+<tr><th>ID</th><td><%= data.id %></td></tr>
+<tr><th>名称</th><td><%= data.name %></td></tr>
+<tr><th>国</th><td><%= data.country %></td></tr>
+<tr><th>開園年</th><td><%= data.opened %></td></tr>
+<tr><th>パーク数</th><td><%= data.parks %></td></tr>
+</table>
+
+<p>
+<a href="/disney2/edit/<%= id %>">編集</a> |
+<a href="/disney2/delete/<%= id %>" onclick="return confirm('削除しますか？');">削除</a>
+</p>
+</body>
+</html>

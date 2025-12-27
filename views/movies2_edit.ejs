@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>洋画 編集</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+<h2>洋画 編集</h2>
+<p><a href="/">トップへ戻る</a> | <a href="/movies2">一覧へ</a></p>
+
+<form action="/movies2/update/<%= id %>" method="POST">
+  <div>タイトル：<input name="title" value="<%= data.title %>" required></div>
+  <div>監督：<input name="director" value="<%= data.director %>" required></div>
+  <div>公開年：<input type="number" name="year" value="<%= data.year %>" required></div>
+  <div>国：<input name="country" value="<%= data.country %>" required></div>
+  <div>ジャンル：<input name="genre" value="<%= data.genre %>" required></div>
+  <button type="submit">更新</button>
+</form>
+</body>
+</html>

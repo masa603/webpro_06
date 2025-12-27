@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>洋画一覧</title>
+  <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+<h2>洋画データベース 一覧</h2>
+<p><a href="/">トップへ戻る</a> | <a href="/movies2/create">新規登録</a></p>
+
+<table border="1">
+
+<tr>
+  <th>ID</th><th>タイトル</th><th>監督</th><th>公開年</th><th>国</th><th>ジャンル</th>
+</tr>
+<% let i=0; for(const row of data){ %>
+<tr>
+  <td><%= row.id %></td>
+  <td><a href="/movies2/<%= i %>"><%= row.title %></a></td>
+  <td><%= row.director %></td>
+  <td><%= row.year %></td>
+  <td><%= row.country %></td>
+  <td><%= row.genre %></td>
+</tr>
+<% i++; } %>
+</table>
+</body>
+</html>

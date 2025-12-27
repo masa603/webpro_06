@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8"><title>Edit</title></head>
+<body>
+<h2>ラ・リーガ 編集</h2>
+<p><a href="/">トップへ戻る</a> | <a href="/laliga2">一覧へ</a></p>
+
+<form action="/laliga2/update/<%= id %>" method="POST">
+  <div>チーム名：<input name="name" value="<%= data.name %>" required></div>
+  <div>都市：<input name="city" value="<%= data.city %>" required></div>
+  <div>スタジアム：<input name="stadium" value="<%= data.stadium %>" required></div>
+  <div>優勝回数：<input name="titles" type="number" min="0" value="<%= data.titles %>" required></div>
+  <button type="submit">更新</button>
+</form>
+</body></html>
